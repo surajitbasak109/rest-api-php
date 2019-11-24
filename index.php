@@ -14,7 +14,7 @@ $request_uri = $_SERVER['REQUEST_URI'];
 
 $tables = ['posts'];
 $url = rtrim($request_uri, '/');
-$url = filter_var($request_uri, FILTER_SANITIZE_URL);
+$url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 // echo print_r($url);
 $tableName = isset($url[2]) ? (string) $url[2] : null;
